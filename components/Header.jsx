@@ -37,7 +37,7 @@ const Header = () => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="max-w-2xl mx-auto font-Ovo"
       >
-        I am a passionate front-end developer with a knack for crafting robust
+        I am a Fresher developer with a knack for crafting robust
         and scalable web applications. I have honed my skills in like React
         ,Java Script, Bootstrap.
       </motion.p>
