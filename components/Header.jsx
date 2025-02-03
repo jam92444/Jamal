@@ -12,7 +12,7 @@ const Header = () => {
         transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
         className="mt-32 sm:mt-10"
       >
-        <Image src={assets.profile_img} className="rounded-full w-32" alt="" />
+        <Image src={assets.profile_img} className="rounded-full w-44" alt="" />
       </motion.div>
       <motion.h3
         initial={{ y: -20, opacity: 0 }}
