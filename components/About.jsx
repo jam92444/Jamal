@@ -53,7 +53,7 @@ const About = ({ isDarkmode }) => {
          transition={{ duration: 0.6,delay:0.8 }}
         className="flex-1">
           <p className="mb-10 max-w-2xl font-Ovo">
-            I'm a passionate frontend developer with a strong foundation in
+            I'm a Freher with a strong foundation in
             JavaScript, Bootstrap, React, Tailwind. I enjoy creating responsive,
             user-friendly websites and strive to craft clean, efficient code.
             Always eager to learn and improve, I aim to build engaging and
