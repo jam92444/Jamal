@@ -81,7 +81,7 @@ export const workData = [
     title: "Doctor Appointment Booking App",
     description: "Web App",
     bgImage: "/work-1.png",
-    link:"https://www.linkedin.com/posts/yusuf-jamal-106772293_fullstackproject-developers-mernstack-activity-7283482847250685953-9ODB?utm_source=share&utm_medium=member_desktop"
+    link:"https://doctor-appointment-myj.onrender.com/"
   },
   {
     title: "ChatBi - RealTime Chat Application",
