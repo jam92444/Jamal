@@ -52,7 +52,7 @@ const Contact = () => {
       <motion.p 
         initial={{opacity:0}}
         whileInView={{opacity:1}}
-        transition={{duration:0.5,delay:0.7}}      
+        transition={{duration:0.5,delay:0.5}}      
       className=" text-center mx-auto mt-5 mb-12 font-Ovo max-w-2xl">
         I'd love to hear from you! If you have any questions, comments, or
         feedback, please use the form below.
@@ -61,13 +61,13 @@ const Contact = () => {
       <motion.form 
        initial={{opacity:0}}
        whileInView={{opacity:1}}
-       transition={{duration:0.5,delay:0.9}}   
+       transition={{duration:0.5,delay:0.5}}   
       onSubmit={onSubmit} className="max-w-2xl mx-auto ">
         <div className="grid grid-cols-auto gap-6 mt-10 mb-8">
           <motion.input
              initial={{x:-50,opacity:0}}
              whileInView={{x:0,opacity:1}}
-             transition={{duration:0.8,delay:0.6}}   
+             transition={{duration:0.5,delay:0.5}}   
             type="text"
             className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
             placeholder="Enter your name."
@@ -77,7 +77,7 @@ const Contact = () => {
           <motion.input
           initial={{x:50,opacity:0}}
           whileInView={{x:0,opacity:1}}
-          transition={{duration:0.9,delay:0.6}}   
+          transition={{duration:0.5,delay:0.5}}   
             type="email"
             className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
             placeholder="Enter your email."
@@ -88,7 +88,7 @@ const Contact = () => {
         <motion.textarea
          initial={{y:100,opacity:0}}
          whileInView={{y:0,opacity:1}}
-         transition={{duration:1.0,delay:0.6}}
+         transition={{duration:0.6,delay:0.6}}
           className="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90"
           rows="6"
           placeholder="Enter your message"
