@@ -4,13 +4,14 @@ import React from "react";
 import { motion } from "motion/react";
 
 const Work = ({ isDarkmode }) => {
+ 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="work"
-      className="w-full px-[12%] py-10 scroll-mt-10"
+      className="w-full px-[12%] py-10 scroll-mt-10 select-none"
     >
       <motion.h4
         initial={{ y: -20, opacity: 0 }}
@@ -49,7 +50,7 @@ const Work = ({ isDarkmode }) => {
             key={index}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
-            className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+            className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative group"
             style={{ backgroundImage: `url(${project.bgImage})` }}
           >
             <div className="bg-white w-10/12 absolute  rounded-md bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex  items-center justify-between duration-500 group-hover:bottom-7">
@@ -59,15 +60,10 @@ const Work = ({ isDarkmode }) => {
                 </h2>
                 <p className="text-sm text-gray-700">{project.description}</p>
               </div>
-              <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                <a href={project.link} target="_blank">
-                  <Image
-                    src={assets.send_icon}
-                    alt="send icon "
-                    className="w-5"
-                  />
-                </a>
-              </div>
+              <a href={project.link} target="_blank" className="border rounded-xl px-2 border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition cursor-pointer">
+                
+              Live
+              </a>
             </div>
           </motion.div>
         ))}

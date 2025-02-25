@@ -81,7 +81,7 @@ export const workData = [
     title: "Doctor Appointment Booking App",
     description: "Web App",
     bgImage: "/work-1.png",
-    link:"https://doctor-appointment-myj.onrender.com/"
+    link:"https://drjamal.vercel.app/"
   },
   {
     title: "ChatBi - RealTime Chat Application",
