@@ -44,6 +44,10 @@ export default function Home() {
           name="description"
           content="Welcome to my portfolio. I am a developer skilled in React, TypeScript, and more."
         />
+        <meta
+          name="google-site-verification"
+          content="w1OtGfNoOboAaLyWwZnhQdJYNwGp_rCVPyoTqh9fyWo"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
         <meta property="og:title" content="Mohamed Yusuf Jamal | Portfolio" />
