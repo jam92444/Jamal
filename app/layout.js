@@ -124,8 +124,7 @@ export const metadata = {
     "hire nextjs developer india",
     "jamal web developer available",
     "remote frontend developer jamal",
-
-    // 🔹 Brand & Portfolio
+    "Professional developer",
     "developer portfolio",
     "personal portfolio",
     "jamal projects",
