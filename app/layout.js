@@ -90,9 +90,15 @@ export const metadata = {
     "open source developer yusuf",
     "mohamed yusuf site link",
     "linkedin yusuf jamal",
+    "portfolio template",
+    "HTML",
+    "React",
+    "CSS",
+    "Professional Site",
 
     // Social and branding keywords
     "mohamed yusuf github",
+    "mohamed yusuf jamal",
     "jamal linkedin profile",
     "jamal web resume",
     "md yusuf online cv",
