@@ -1,5 +1,6 @@
 import { Outfit, Ovo } from "next/font/google";
 import "./globals.css";
+import { url } from "inspector";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -278,6 +279,7 @@ export const metadata = {
     ],
   },
   twitter: {
+    url: "https://x.com/mdyusufwork",
     card: "summary_large_image",
     title: "Mohamed Yusuf Jamal | Full Stack & React Developer Portfolio",
     description:
