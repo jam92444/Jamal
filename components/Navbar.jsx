@@ -1,176 +1,192 @@
-'use client'
-import { assets } from "@/assets/assets";
+"use client";
+import { assets } from "../assets/assets";
 import Image from "next/image";
-import {useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const Navbar = ({isDarkmode,setIsDarkMode}) => {
-
-  const [isScroll ,setIsScroll] = useState(false)
+const Navbar = ({ isDarkmode, setIsDarkMode }) => {
+  const [isScroll, setIsScroll] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const sideMenuRef = useRef();
 
   const openMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(-16rem)";
+    setIsMenuOpen(true);
+    if (sideMenuRef.current) {
+      sideMenuRef.current.style.transform = "translateX(0)";
+    }
   };
   const closeMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(16rem)";
+    setIsMenuOpen(false);
+    if (sideMenuRef.current) {
+      sideMenuRef.current.style.transform = "translateX(16rem)";
+    }
   };
 
-  useEffect(()=>{
-    window.addEventListener('scroll',()=>{
-      if(scrollY > 50){
-        setIsScroll(true)
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScroll(window.scrollY > 50);
+    };
 
-      }
-      else{
-        setIsScroll(false)
-      }
-    })
-  },[])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (sideMenuRef.current) {
+      sideMenuRef.current.style.transform = "translateX(16rem)";
+    }
+  }, []);
+
+  const menuItems = [
+    { name: "Home", href: "/" },
+    { name: "About me", href: "#about" },
+    { name: "Services", href: "#services" },
+    { name: "My Work", href: "#work" },
+    { name: "Contact me", href: "#contact" },
+  ];
+
   return (
-    <di className="bg-white sm:bg-transparent">
+    <div className="bg-white sm:bg-transparent">
       <div className="fixed opacity-50 top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
         <Image
           src={assets.header_bg_color}
-          className="w-full"  
-          alt=""
+          className="w-full"
+          alt="Decorative header background"
+          priority
         />
       </div>
-      <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20":""}`}>
-        <a href="#top">
+
+      <nav
+        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${
+          isScroll
+            ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20"
+            : ""
+        }`}
+        role="navigation"
+        aria-label="Primary navigation"
+      >
+        <a href="#top" aria-label="Go to top of page">
           <Image
             src={isDarkmode ? assets.logo_dark : assets.logo}
-            alt="logo"
+            alt="Md. Yusuf Jamal logo"
             className="w-48 cursor-pointer mr-14"
+            priority
           />
         </a>
-        <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${!isScroll ? "bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:background-transparent ": ""}`}>
-          <li>
-            <a
-              className="font-Ovo cursor-pointer"
-              onClick={closeMenu}
-              href="#top"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              className="font-Ovo cursor-pointer"
-              onClick={closeMenu}
-              href="#about"
-            >
-              About me
-            </a>
-          </li>
-          {/* <li>
-            <a
-              className="font-Ovo cursor-pointer"
-              onClick={closeMenu}
-              href="#services"
-            >
-              Services
-            </a>
-          </li> */}
-          <li>
-            <a
-              className="font-Ovo cursor-pointer"
-              onClick={closeMenu}
-              href="#work"
-            >
-              My Work
-            </a>
-          </li>
-          <li>
-            <a
-              className="font-Ovo cursor-pointer"
-              onClick={closeMenu}
-              href="#contact"
-            >
-              Contact me
-            </a>
-          </li>
+
+        {/* Desktop Menu */}
+        <ul
+          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
+            !isScroll
+              ? "bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:background-transparent"
+              : ""
+          }`}
+          role="menubar"
+        >
+          {menuItems
+            .filter((item) => item.name !== "Services")
+            .map(({ name, href }) => (
+              <li key={name} role="none">
+                <a
+                  className="font-Ovo cursor-pointer"
+                  href={href}
+                  onClick={closeMenu}
+                  role="menuitem"
+                  tabIndex={0}
+                >
+                  {name}
+                </a>
+              </li>
+            ))}
         </ul>
 
+        {/* Controls */}
         <div className="flex items-center gap-4">
-          <button onClick={()=>setIsDarkMode(prev=> !prev)} >
-            {" "}
-            <Image src={ isDarkmode ? assets.sun_icon : assets.moon_icon} alt="" className="w-6" />
+          <button
+            aria-label={`Switch to ${isDarkmode ? "light" : "dark"} mode`}
+            onClick={() => setIsDarkMode((prev) => !prev)}
+            className="focus:outline-none"
+          >
+            <Image
+              src={isDarkmode ? assets.sun_icon : assets.moon_icon}
+              alt={
+                isDarkmode
+                  ? "Sun icon for light mode"
+                  : "Moon icon for dark mode"
+              }
+              className="w-6"
+            />
           </button>
+
           <a
-            className="hidden md:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo cursor-pointer dark:border-white/50 "
-            onClick={closeMenu}
+            className="hidden md:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo cursor-pointer dark:border-white/50"
             href="#contact"
+            onClick={closeMenu}
+            role="button"
+            tabIndex={0}
           >
             Contact me
-            <Image src={ isDarkmode? assets.arrow_icon_dark : assets.arrow_icon} alt="contact" className="w-3" />
+            <Image
+              src={isDarkmode ? assets.arrow_icon_dark : assets.arrow_icon}
+              alt="Arrow icon"
+              className="w-3"
+            />
           </a>
 
-          <button onClick={openMenu} className="block md:hidden">
-            {" "}
-            <Image src={ isDarkmode? assets.menu_white: assets.menu_black} alt="" className="w-6" />
+          <button
+            aria-label="Open mobile menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
+            onClick={openMenu}
+            className="block md:hidden focus:outline-none"
+          >
+            <Image
+              src={isDarkmode ? assets.menu_white : assets.menu_black}
+              alt="Menu icon"
+              className="w-6"
+            />
           </button>
         </div>
 
-        {/* small screen navaigation menu. */}
+        {/* Mobile Menu */}
         <ul
+          id="mobile-menu"
           ref={sideMenuRef}
-          className="flex md:hidden flex-col gap-4 py-20 px-4 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 dark:bg-darkHover dark:text-white"
+          className="flex md:hidden flex-col gap-4 py-20 px-4 fixed right-0 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition-transform duration-500 dark:bg-darkHover dark:text-white"
+          style={{ transform: "translateX(16rem)" }}
+          role="menu"
+          aria-label="Mobile navigation menu"
         >
-          <div onClick={closeMenu} className="absolute top-6 right-6">
+          <div
+            onClick={closeMenu}
+            className="absolute top-6 right-6 cursor-pointer"
+            role="button"
+            tabIndex={0}
+            aria-label="Close menu"
+            onKeyDown={(e) => e.key === "Enter" && closeMenu()}
+          >
             <Image
-              src={ isDarkmode ? assets.close_white : assets.close_black}
-              alt=""
-              className="w-5 cursor-pointer"
+              src={isDarkmode ? assets.close_white : assets.close_black}
+              alt="Close menu icon"
+              className="w-5"
             />
           </div>
-          <li>
-            <a
-              className="font-Ovo cursor-pointer"
-              onClick={closeMenu}
-              href="#top"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              className="font-Ovo cursor-pointer"
-              onClick={closeMenu}
-              href="#about"
-            >
-              About me
-            </a>
-          </li>
-          <li>
-            <a
-              className="font-Ovo cursor-pointer"
-              onClick={closeMenu}
-              href="#services"
-            >
-              Services
-            </a>
-          </li>
-          <li>
-            <a
-              className="font-Ovo cursor-pointer"
-              onClick={closeMenu}
-              href="#work"
-            >
-              My Work
-            </a>
-          </li>
-          <li>
-            <a
-              className="font-Ovo cursor-pointer"
-              onClick={closeMenu}
-              href="#contact"
-            >
-              Contact me
-            </a>
-          </li>
+
+          {menuItems.map(({ name, href }) => (
+            <li key={name} role="none">
+              <a
+                className="font-Ovo cursor-pointer"
+                href={href}
+                onClick={closeMenu}
+                role="menuitem"
+                tabIndex={0}
+              >
+                {name}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
-    </di>
+    </div>
   );
 };
 

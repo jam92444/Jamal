@@ -79,27 +79,59 @@ export const assets = {
 export const workData = [
   {
     title: "Doctor Appointment Booking App",
+    id: "1",
     description: "Web App",
     bgImage: "/work-1.png",
-    link:"https://drjamal.vercel.app/"
+    link: "https://drjamal.vercel.app/",
   },
   {
     title: "ChatBi - RealTime Chat Application",
+    id: "2",
     description: "Web App",
     bgImage: "/work-2.png",
-    link:"https://chatbi.vercel.app/"
+    link: "https://chatbi.vercel.app/",
   },
   {
     title: "STYL.myj - Ecommerce Site",
+    id: "3",
     description: "Web Design",
     bgImage: "/work-3.png",
-    link:"https://styl-myj.vercel.app/"
+    link: "https://styl-myj.vercel.app/",
   },
   {
     title: "Portfolio",
+    id: "4",
     description: "Web App",
     bgImage: "/work-4.png",
-    link:"https://mohamedyusufjamalportfolio.vercel.app/"
+    link: "https://mohamedyusufjamalportfolio.vercel.app/",
+  },
+  {
+    title: "Doctor Appointment Booking App",
+    id: "1",
+    description: "Web App",
+    bgImage: "/work-1.png",
+    link: "https://drjamal.vercel.app/",
+  },
+  {
+    title: "ChatBi - RealTime Chat Application",
+    id: "2",
+    description: "Web App",
+    bgImage: "/work-2.png",
+    link: "https://chatbi.vercel.app/",
+  },
+  {
+    title: "STYL.myj - Ecommerce Site",
+    id: "3",
+    description: "Web Design",
+    bgImage: "/work-3.png",
+    link: "https://styl-myj.vercel.app/",
+  },
+  {
+    title: "Portfolio",
+    id: "4",
+    description: "Web App",
+    bgImage: "/work-4.png",
+    link: "https://mohamedyusufjamalportfolio.vercel.app/",
   },
 ];
 
@@ -137,7 +169,8 @@ export const infoList = [
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
     title: "Languages",
-    description: "HTML, CSS, JavaScript, React Js, Bootstrap, Python and MySql.",
+    description:
+      "HTML, CSS, JavaScript, React Js, Bootstrap, Python and MySql.",
   },
   {
     icon: assets.edu_icon,
@@ -154,9 +187,8 @@ export const infoList = [
 ];
 
 export const toolsData = [
-  assets.vscode,
-  assets.firebase,
-  assets.mongodb,
-//   assets.figma,
-  assets.git,
+  { src: assets.vscode, name: "VSCode" },
+  { src: assets.firebase, name: "Firebase" },
+  { src: assets.mongodb, name: "MongoDB" },
+  { src: assets.git, name: "Git" },
 ];
