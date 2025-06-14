@@ -1,43 +1,54 @@
 export default function Head() {
   return (
     <>
-      <title>Mohamed Yusuf Jamal | Portfolio</title>
+      <title>Portfolio - Md. Yusuf Jamal</title>
       <meta
         name="description"
-        content="Welcome to my portfolio. I am a developer skilled in React, TypeScript, and more."
+        content="A full-fledged full stack developer showcasing frontend and backend projects."
       />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta charSet="UTF-8" />
-      <meta property="og:title" content="Mohamed Yusuf Jamal | Portfolio" />
-      <meta
-        property="og:description"
-        content="Welcome to my portfolio. I am a developer skilled in React, TypeScript, and more."
-      />
-      <meta property="og:type" content="website" />
       <meta
         name="google-site-verification"
         content="w1OtGfNoOboAaLyWwZnhQdJYNwGp_rCVPyoTqh9fyWo"
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Mohamed Yusuf Jamal",
-            url: "https://mohamedyusufjamalportfolio.vercel.app/",
-            sameAs: [
-              "https://github.com/jam92444",
-              "https://www.linkedin.com/in/mohamed-yusuf-jamal-106772293/",
-            ],
-            jobTitle: "Frontend Engineer",
-            worksFor: {
-              "@type": "Organization",
-              name: "M-Guru Company",
-            },
-          }),
-        }}
+      <meta
+        name="keywords"
+        content="full stack developer,frontend developer,backend developer,portfolio,Md Yusuf Jamal"
       />
+      <meta property="og:title" content="Portfolio - Md. Yusuf Jamal" />
+      <meta
+        property="og:description"
+        content="A full-fledged full stack developer showcasing frontend and backend projects."
+      />
+      <meta
+        property="og:url"
+        content="https://mohamedyusufjamalportfolio.vercel.app/"
+      />
+      <meta property="og:site_name" content="Md. Yusuf Jamal Portfolio" />
+      <meta property="og:locale" content="en_US" />
+      <meta
+        property="og:image"
+        content="https://mohamedyusufjamalportfolio.vercel.app/"
+      />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="Md. Yusuf Jamal Portfolio" />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Portfolio - Md. Yusuf Jamal" />
+      <meta
+        name="twitter:description"
+        content="A full-fledged full stack developer showcasing frontend and backend projects."
+      />
+      <meta
+        name="twitter:image"
+        content="https://mohamedyusufjamalportfolio.vercel.app/"
+      />
+      <meta name="twitter:image:width" content="1200" />
+      <meta name="twitter:image:height" content="630" />
+      <meta name="twitter:image:alt" content="Md. Yusuf Jamal Portfolio" />
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/site.webmanifest" />
     </>
   );
 }
