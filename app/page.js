@@ -1,13 +1,15 @@
 "use client";
-
 import Head from "next/head";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import dynamic from "next/dynamic";
 import Navbar from "../components/Navbar";
-import Work from "../components/Work";
+import Header from "../components/Header";
 import { useEffect, useState } from "react";
-import About from "../components/About";
+
+// Lazy load the rest
+const About = dynamic(() => import("../components/About"));
+const Work = dynamic(() => import("../components/Work"));
+const Contact = dynamic(() => import("../components/Contact"));
+const Footer = dynamic(() => import("../components/Footer"));
 
 export default function Home() {
   const [isDarkmode, setIsDarkMode] = useState(false);
@@ -45,7 +47,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
         <meta property="og:title" content="Mohamed Yusuf Jamal | Portfolio" />
-
         <meta
           property="og:description"
           content="Welcome to my portfolio. I am a developer skilled in React, TypeScript, and more."
@@ -79,9 +80,6 @@ export default function Home() {
         <section id="about">
           <About isDarkmode={isDarkmode} />
         </section>
-        {/* <section id="services">
-          <Services isDarkmode={isDarkmode} />
-        </section> */}
         <section id="work">
           <Work isDarkmode={isDarkmode} />
         </section>
