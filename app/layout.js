@@ -11,7 +11,8 @@ const ovo = Ovo({
 });
 
 export const metadata = {
-  title: "Portfolio - Md. Yusuf Jamal",
+  title: "Mohamed Yusuf Jamal | Full Stack & React Developer Portfolio",
+
   description:
     "A full-fledged full stack developer showcasing frontend and backend projects.",
   keywords: [
@@ -154,7 +155,8 @@ export const metadata = {
     google: "w1OtGfNoOboAaLyWwZnhQdJYNwGp_rCVPyoTqh9fyWo",
   },
   openGraph: {
-    title: "Portfolio - Md. Yusuf Jamal",
+    title: "Mohamed Yusuf Jamal | Full Stack & React Developer Portfolio",
+
     description:
       "A full-fledged full stack developer showcasing frontend and backend projects.",
     url: "https://mohamedyusufjamalportfolio.vercel.app/",
@@ -172,10 +174,27 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Portfolio - Md. Yusuf Jamal",
+    title: "Mohamed Yusuf Jamal | Full Stack & React Developer Portfolio",
     description:
       "A full-fledged full stack developer showcasing frontend and backend projects.",
     images: ["https://mohamedyusufjamalportfolio.vercel.app/"],
+  },
+  openGraph: {
+    title: "Mohamed Yusuf Jamal | Full Stack & React Developer Portfolio",
+    description:
+      "Explore the portfolio of Mohamed Yusuf Jamal, a full stack developer specializing in React, Next.js, and building modern web applications.",
+    url: "https://mohamedyusufjamalportfolio.vercel.app/",
+    siteName: "Mohamed Yusuf Jamal Portfolio",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "https://mohamedyusufjamalportfolio.vercel.app/", // <-- Make sure this image exists in /public
+        width: 1200,
+        height: 630,
+        alt: "Mohamed Yusuf Jamal Portfolio Preview",
+      },
+    ],
   },
 };
 

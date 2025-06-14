@@ -10,7 +10,7 @@ const About = ({ isDarkmode }) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="w-full px-[12%] py-10 mt-10 scroll-mt-10"
+      className="w-full px-[12%] py-10 mt-10 scroll-mt-10 max-w-[1980px] mx-auto"
       aria-label="About section"
     >
       <motion.h3
@@ -35,19 +35,19 @@ const About = ({ isDarkmode }) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.3 }}
-        className="flex w-full flex-col lg:flex-row items-center gap-20 my-20"
+        className="flex w-full max-w-[1980px] flex-col lg:flex-row items-center gap-20 my-20 mx-auto"
       >
         {/* Profile Image */}
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="w-64 sm:w-80 rounded-3xl max-w-none"
+          className="w-72 sm:w-80 rounded-3xl max-w-none"
         >
           <Image
             src={assets.user_image}
             alt="Md. Yusuf Jamal - Frontend Developer"
-            width={320} // Set this to your actual image width in pixels
+            width={380} // Set this to your actual image width in pixels
             height={320} // Set this to your actual image height in pixels
             className="w-full rounded-2xl"
             priority

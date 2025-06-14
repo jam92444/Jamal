@@ -1,7 +1,9 @@
 export default function Head() {
   return (
     <>
-      <title>Mohamed Yusuf Jamal | Full Stack Developer Portfolio</title>
+      <title>
+        Mohamed Yusuf Jamal | Full Stack & React Developer Portfolio
+      </title>
       <meta
         name="description"
         content="Portfolio of Mohamed Yusuf Jamal — a full stack developer based in Coimbatore, Tamil Nadu, India. Specialized in React, Next.js, and modern web development."

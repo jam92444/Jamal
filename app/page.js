@@ -38,7 +38,7 @@ export default function Home() {
 
   return (
     <>
-      <main>
+      <main className="my-0 mx-auto">
         <Navbar isDarkmode={isDarkmode} setIsDarkMode={setIsDarkMode} />
         <Header isDarkmode={isDarkmode} />
         <section id="about">

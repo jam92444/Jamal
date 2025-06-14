@@ -45,8 +45,8 @@ const Navbar = ({ isDarkmode, setIsDarkMode }) => {
   ];
 
   return (
-    <div className="bg-white sm:bg-transparent">
-      <div className="fixed opacity-50 top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
+    <div className="bg-white sm:bg-transparent max-w-[1980px]">
+      <div className="fixed opacity-50 top-0 left-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
         <Image
           src={assets.header_bg_color}
           className="w-full"

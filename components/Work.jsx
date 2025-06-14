@@ -8,7 +8,7 @@ const Work = ({ isDarkmode }) => {
     <section
       id="work"
       aria-label="Portfolio projects"
-      className="w-full px-[12%] py-10 scroll-mt-10 select-none"
+      className="w-full px-[12%] py-10 scroll-mt-10 select-none max-w-[1980px] mx-auto"
     >
       <motion.h4
         initial={{ y: -20, opacity: 0 }}

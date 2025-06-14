@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer = ({ isDarkmode }) => {
   return (
-    <footer className="mt-20">
+    <footer className="mt-20 max-w-[1980px] mx-auto">
       <div className="text-center">
         <Image
           src={isDarkmode ? assets.logo_dark : assets.logo}
