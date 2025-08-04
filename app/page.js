@@ -1,20 +1,20 @@
-"use client";
+'use client'
 
-import dynamic from "next/dynamic";
-import Navbar from "../components/Navbar";
-import Header from "../components/Header";
+import About from "components/About";
+import Contact from "components/Contact";
+import Footer from "components/Footer";
+import Header from "components/Header";
+import Navbar from "components/Navbar";
+import Work from "components/Work";
 import { useEffect, useState } from "react";
-
-// Lazy-loaded components
-const About = dynamic(() => import("../components/About"));
-const Work = dynamic(() => import("../components/Work"));
-const Contact = dynamic(() => import("../components/Contact"));
-const Footer = dynamic(() => import("../components/Footer"));
 
 export default function Home() {
   const [isDarkmode, setIsDarkMode] = useState(false);
+  const [mounted, setMounted] = useState(false); // ← new
 
   useEffect(() => {
+    setMounted(true); // ← tell React we're on the client now
+
     if (
       localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
@@ -35,6 +35,8 @@ export default function Home() {
       localStorage.theme = "";
     }
   }, [isDarkmode]);
+
+  if (!mounted) return null; // ← avoid rendering mismatched UI
 
   return (
     <>

@@ -1,3 +1,5 @@
+'use client'
+
 import { assets } from "../assets/assets";
 import Image from "next/image";
 import React from "react";
@@ -6,22 +8,7 @@ import { motion } from "motion/react";
 const Header = () => {
   return (
     <header className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 pt-20">
-      {/* <motion.div
-        initial={{ scale: 0 }}
-        whileInView={{ scale: 1 }}
-        transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-        className="mt-32 sm:mt-10"
-      >
-        <Image
-          src={assets.profile_img}
-          alt="Md. Yusuf Jamal profile picture"
-          width={176} // e.g. 44 * 4 = 176 pixels
-          height={176}
-          className="rounded-full w-44"
-          priority
-        />
-      </motion.div> */}
-
+   
       <motion.h2
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
