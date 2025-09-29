@@ -62,12 +62,16 @@ const About = ({ isDarkmode }) => {
           className="flex-1"
         >
           <p className="mb-10 max-w-2xl font-Ovo leading-relaxed text-gray-800 dark:text-white/80">
-            I’m Md. Yusuf Jamal, a passionate frontend developer with a strong
-            foundation in <strong>JavaScript</strong>, <strong>React</strong>,
-            <strong>Tailwind CSS</strong>, and <strong>Bootstrap</strong>. I
-            focus on building responsive, user-friendly interfaces and writing
-            clean, maintainable code. Eager to grow and contribute, I strive to
-            craft seamless web experiences that delight users.
+            I’m Md. Yusuf Jamal, a passionate (Python & MERN) fullstack
+            developer with a strong foundation in <strong>JavaScript</strong>,{" "}
+            <strong>Typescript</strong>, <strong>Python</strong>,{" "}
+            <strong>Manual Testing</strong>,<strong>Documentation</strong>,{" "}
+            <strong>React</strong>,<strong>Tailwind CSS</strong>,{" "}
+            <strong>Express</strong>, <strong>Flask</strong>, and{" "}
+            <strong>Bootstrap</strong>. I focus on building responsive,
+            user-friendly interfaces and writing clean, maintainable code. Eager
+            to grow and contribute, I strive to craft seamless web experiences
+            that delight users.
           </p>
 
           {/* Info Grid */}

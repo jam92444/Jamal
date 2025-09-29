@@ -81,13 +81,14 @@ const Work = ({ isDarkmode }) => {
           </motion.article>
         ))}
       </motion.div>
-      <motion.a
+      <motion.button
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.9, duration: 0.5 }}
         href="/projects"
         aria-label="Show more projects"
-        className="w-max flex items-center justify-center gap-2 text-gray-700 border border-[0.5] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover"
+        disabled={true}
+        className={`w-max flex items-center justify-center gap-2 text-gray-700 border border-[0.5] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover`}
       >
         Show more{" "}
         <Image
@@ -97,7 +98,7 @@ const Work = ({ isDarkmode }) => {
           className="w-4"
           alt="Right arrow"
         />
-      </motion.a>
+      </motion.button>
     </section>
   );
 };

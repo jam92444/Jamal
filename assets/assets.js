@@ -85,11 +85,11 @@ export const workData = [
     link: "https://drjamal.vercel.app/",
   },
   {
-    title: "ChatBi - RealTime Chat Application",
+    title: "Chatsapp - RealTime Chat Application",
     id: "2",
     description: "Web App",
     bgImage: "/work-2.png",
-    link: "https://chatbi.vercel.app/",
+    link: "https://indian-chatsapp.vercel.app/",
   },
   {
     title: "STYL.myj - Ecommerce Site",
@@ -99,39 +99,11 @@ export const workData = [
     link: "https://styl-myj.vercel.app/",
   },
   {
-    title: "Portfolio",
+    title: "Ecommerce (Currently Working)",
     id: "4",
-    description: "Web App",
+    description: "Demo Provided",
     bgImage: "/work-4.png",
-    link: "https://mohamedyusufjamalportfolio.vercel.app/",
-  },
-  {
-    title: "Doctor Appointment Booking App",
-    id: "1",
-    description: "Web App",
-    bgImage: "/work-1.png",
-    link: "https://drjamal.vercel.app/",
-  },
-  {
-    title: "ChatBi - RealTime Chat Application",
-    id: "2",
-    description: "Web App",
-    bgImage: "/work-2.png",
-    link: "https://chatbi.vercel.app/",
-  },
-  {
-    title: "STYL.myj - Ecommerce Site",
-    id: "3",
-    description: "Web Design",
-    bgImage: "/work-3.png",
-    link: "https://styl-myj.vercel.app/",
-  },
-  {
-    title: "Portfolio",
-    id: "4",
-    description: "Web App",
-    bgImage: "/work-4.png",
-    link: "https://mohamedyusufjamalportfolio.vercel.app/",
+    link: "https://ackidswear.vercel.app/",
   },
 ];
 
@@ -170,7 +142,7 @@ export const infoList = [
     iconDark: assets.code_icon_dark,
     title: "Languages",
     description:
-      "HTML, CSS, JavaScript, React Js, Bootstrap, Python and MySql.",
+      "HTML, CSS, JavaScript, React Js, Bootstrap, Python, Typescript, NoSql and MySql.",
   },
   {
     icon: assets.edu_icon,
