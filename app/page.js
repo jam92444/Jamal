@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import About from "components/About";
 import Contact from "components/Contact";
@@ -43,11 +43,11 @@ export default function Home() {
       <main className="my-0 mx-auto">
         <Navbar isDarkmode={isDarkmode} setIsDarkMode={setIsDarkMode} />
         <Header isDarkmode={isDarkmode} />
-        <section id="about">
-          <About isDarkmode={isDarkmode} />
-        </section>
         <section id="work">
           <Work isDarkmode={isDarkmode} />
+        </section>
+        <section id="about">
+          <About isDarkmode={isDarkmode} />
         </section>
         <section id="contact">
           <Contact isDarkmode={isDarkmode} />

@@ -78,30 +78,38 @@ export const assets = {
 
 export const workData = [
   {
+    title: "Retail Management App (Fully offline Working)",
+    id: "5",
+    description:
+      "Procurement, Billing, User Management, Module-based access control, Label Generation, Report",
+    bgImage: "/work-5.png",
+    link: "https://www.linkedin.com/posts/mohamed-yusuf-jamal-106772293_buildinpublic-reactjs-electronjs-ugcPost-7439048774095888384-HrSg?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEcgSRYBJTwe4c-VV4yaS-bqRFnRGcmb8d4",
+  },
+  {
     title: "Doctor Appointment Booking App",
     id: "1",
-    description: "Web App",
+    description: "Appointment booking, Doctor Management, Payment Integration, Slot management",
     bgImage: "/work-1.png",
     link: "https://drjamal.vercel.app/",
   },
   {
     title: "Chatsapp - RealTime Chat Application",
     id: "2",
-    description: "Web App",
+    description: "Real time chat, send message, Change profile..",
     bgImage: "/work-2.png",
     link: "https://indian-chatsapp.vercel.app/",
   },
   {
     title: "STYL.myj - Ecommerce Site",
     id: "3",
-    description: "Web Design",
+    description: "Full Ecommerce Functionality, with admin dashboard , managing  Product and orders",
     bgImage: "/work-3.png",
     link: "https://styl-myj.vercel.app/",
   },
   {
-    title: "Ecommerce (Currently Working)",
+    title: "Ecommerce Only Demo",
     id: "4",
-    description: "Demo Provided",
+    description: "Demo for Client requested Ecommerce template.",
     bgImage: "/work-4.png",
     link: "https://ackidswear.vercel.app/",
   },
@@ -142,7 +150,7 @@ export const infoList = [
     iconDark: assets.code_icon_dark,
     title: "Languages",
     description:
-      "HTML, CSS, JavaScript, React Js, Bootstrap, Python, Typescript, NoSql and MySql.",
+      "HTML, CSS, JavaScript, React Js, Bootstrap, Python, Typescript, NoSql, Electron Js and MySql.",
   },
   {
     icon: assets.edu_icon,

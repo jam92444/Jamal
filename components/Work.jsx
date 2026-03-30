@@ -42,7 +42,7 @@ const Work = ({ isDarkmode }) => {
         transition={{ delay: 0.8, duration: 0.6 }}
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 my-10 gap-5 dark:text-black"
       >
-        {workData.slice(0, 4).map((project, index) => (
+        {workData.slice(0, 5  ).map((project, index) => (
           <motion.article
             key={index}
             whileHover={{ scale: 1.05 }}
